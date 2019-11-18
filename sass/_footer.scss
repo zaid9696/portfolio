@@ -1,0 +1,30 @@
+.footer{
+
+    grid-column: full-start / full-end;
+    background-image: linear-gradient(to right bottom, #493464, #832960);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 28px;
+
+    &__contact{
+
+        img{
+            width: 30px;
+            margin-left: 18px;
+            @media only screen and (max-width:325px){
+
+                width: 23px;
+                margin-left: 7px;
+            }
+            
+        }
+    }
+
+    &__copyright{
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 100;
+    }
+    
+}

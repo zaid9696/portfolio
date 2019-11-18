@@ -1,0 +1,90 @@
+.skills{
+
+    grid-column: center-start / center-end;
+    margin-bottom: 6rem;
+
+    &__title{
+        background: linear-gradient(to right, #665282 , #e49290 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: 3px;
+    margin: 4rem 0;
+    }
+
+    &__content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 100px;
+        row-gap: 76px;
+        
+        @media only screen and (max-width:$bp-medium){
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+    }
+
+    &__skill{
+        border-bottom: 2px solid $color-secondary;
+        padding-bottom: 18px;
+        h2{
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: $color-primary;
+            margin-right: 53px;
+            @media only screen and (max-width:$bp-large){
+               margin-right: 0;
+            }
+            
+        }
+    }
+
+    &__img{
+
+        
+        padding: 1rem;
+        position: relative;
+        background: linear-gradient(to right, $color-primary, $color-secondary);
+        padding: 3px;
+        border-radius: 50%;
+        max-width: 100px;
+        
+        img{
+            width: 65px;
+            @media only screen and (max-width:$bp-large){
+                width: 65%;
+
+            }
+
+        }
+    }
+
+    &__img.first{
+        grid-column: 2;
+
+        
+    }
+
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 40px;
+
+        
+        
+    }
+   
+
+    &__wrap{
+        background-color: #fff;
+        padding: 14px 0;
+        text-align: center;
+        border-radius: 50%;
+        max-width: 111px;
+    }
+}
