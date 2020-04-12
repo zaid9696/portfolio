@@ -22,11 +22,32 @@ const listNav = document.querySelectorAll(".nav__menu ul li");
 const loader = document.querySelector(".loader_container");
 
 
+function showPress(){
+
+    sites.forEach(item =>{
+
+        
+
+        item.classList.remove("show")
+        item.classList.add("hide")
+        if(item.dataset.site === 'wordpress'){
+
+            item.classList.remove("hide")
+            item.classList.remove("last")
+            item.classList.add("show")
+            
+
+        }
+
+    })
+
+}
+
 function showSatic(){
 
     sites.forEach(item =>{
 
-        console.log(item.dataset.site)
+        
 
         item.classList.remove("show")
         item.classList.add("hide")
@@ -42,6 +63,8 @@ function showSatic(){
     })
 
 }
+
+
 function showApp(){
 
     sites.forEach(item =>{
@@ -100,6 +123,12 @@ filter.addEventListener("click", (e) =>{
        showSatic()
        btn.style.display = "none"
        
+   }else if(e.target.matches(".wordpress")){
+        removeActive()
+        e.target.classList.add("active")
+        btn.style.display = "none"
+        showPress()
+
    }
 
 
