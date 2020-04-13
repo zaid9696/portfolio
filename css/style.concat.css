@@ -1869,6 +1869,11 @@ div:hover {
     grid-column: center-start / center-end;
     display: flex;
     margin-bottom: 4rem; }
+    @media only screen and (max-width: 500px) {
+      .portfolio__filter {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 17px; } }
     .portfolio__filter div {
       font-size: 2rem;
       color: #e49290;
@@ -1886,7 +1891,8 @@ div:hover {
         margin-right: 29px; }
       @media only screen and (max-width: 500px) {
         .portfolio__filter div {
-          font-size: 1.4rem; } }
+          font-size: 1.4rem;
+          margin-right: 29px; } }
       .portfolio__filter div:hover {
         background: #e49290;
         color: #fff; }
