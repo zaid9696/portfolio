@@ -61,7 +61,8 @@
             grid-column: center-start / center-end;
             position: absolute;
             bottom: 132px;
-            background-color: #e49290;
+            background-color: #55486b;
+            border:2px solid #e49290;
             width: 240px;
             height: 55px;
             font-size: 2.4rem;
@@ -69,17 +70,20 @@
             letter-spacing: 1px;
             font-weight: 600;
             color: #fff;
-            border: 0px solid;
             border-radius: 58px;
             transition: all 0.3s ease-out;
             outline:none;
             cursor: pointer;
             &:hover{
                 border-width: 1px;
+                border:1px solid #55486b;
                 transition: all 0.3s ease-out;
                 background-color: #e89896;
-
-
+                color:#55486b;
+                box-shadow: 0px 0px 10px 1px #55486b;
+            }
+            &:focus{
+                box-shadow: 0px 0px 10px 1px #e49290;
             }
         }
     }

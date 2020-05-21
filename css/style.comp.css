@@ -14,9 +14,20 @@ html {
       font-size: 50%; } }
 
 body {
+  width: 100%; }
+
+main {
   display: grid;
   grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-start]) [center-end] minmax(2rem, 1fr) [full-end];
   grid-template-rows: 585px repeat(5, min-content); }
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
 
 ::selection {
   background-color: #736d7c;
@@ -128,51 +139,47 @@ div:hover {
           transition: all 0.2s ease-in-out; }
           .nav ul li:hover {
             border-bottom-color: #e49290; } }
-      .nav ul li::after {
-        content: '';
-        position: absolute;
-        top: 20px;
-        left: 0;
-        width: 100%;
-        height: 0px;
-        transition: all 0.3s ease-in-out;
-        background-color: #e49290; }
-        @media only screen and (max-width: 745px) {
-          .nav ul li::after {
-            display: none; } }
-      .nav ul li:hover::after {
-        height: 3px; }
     .nav ul a {
+      transition: all 0.1s ease-in-out;
       color: #fff;
       text-decoration: none;
       font-size: 1.7rem;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      border-bottom: 0px solid #e49290; }
+      .nav ul a:hover {
+        border-bottom-width: 2px; }
       @media only screen and (max-width: 745px) {
         .nav ul a {
           font-size: 2.7rem;
           transition: all 0.2s ease-in-out; }
           .nav ul a:hover {
             color: #e49290; } }
-  .nav__logo h3 {
-    font-size: 3rem;
-    color: #fff;
-    text-transform: uppercase;
-    position: relative;
-    cursor: pointer; }
-    .nav__logo h3 span {
-      position: absolute;
-      left: 16px;
-      font-size: 1.4rem;
-      top: 10px;
-      color: #e49290;
-      font-weight: 400; }
-      @media only screen and (max-width: 935px) {
-        .nav__logo h3 span {
-          left: 14px;
-          font-size: 1.4rem;
-          top: 7px; } }
+  .nav #nav-logo {
+    text-decoration: none; }
+    .nav #nav-logo h3 {
+      font-size: 3rem;
+      color: #fff;
+      text-transform: uppercase;
+      position: relative;
+      cursor: pointer; }
+      .nav #nav-logo h3 span {
+        position: absolute;
+        left: 16px;
+        font-size: 1.4rem;
+        top: 10px;
+        color: #e49290;
+        font-weight: 400; }
+        @media only screen and (max-width: 935px) {
+          .nav #nav-logo h3 span {
+            left: 14px;
+            font-size: 1.4rem;
+            top: 7px; } }
   .nav__ham {
-    cursor: pointer; }
+    cursor: pointer;
+    display: none; }
+    @media only screen and (max-width: 745px) {
+      .nav__ham {
+        display: block; } }
     .nav__ham:hover .nav__line:nth-child(2) {
       width: 20px; }
   .nav .cancel {
@@ -250,7 +257,8 @@ div:hover {
       grid-column: center-start / center-end;
       position: absolute;
       bottom: 132px;
-      background-color: #e49290;
+      background-color: #55486b;
+      border: 2px solid #e49290;
       width: 240px;
       height: 55px;
       font-size: 2.4rem;
@@ -258,15 +266,19 @@ div:hover {
       letter-spacing: 1px;
       font-weight: 600;
       color: #fff;
-      border: 0px solid;
       border-radius: 58px;
       transition: all 0.3s ease-out;
       outline: none;
       cursor: pointer; }
       .hero__text button:hover {
         border-width: 1px;
+        border: 1px solid #55486b;
         transition: all 0.3s ease-out;
-        background-color: #e89896; }
+        background-color: #e89896;
+        color: #55486b;
+        box-shadow: 0px 0px 10px 1px #55486b; }
+      .hero__text button:focus {
+        box-shadow: 0px 0px 10px 1px #e49290; }
   .hero__btnlink {
     display: contents; }
 
@@ -294,7 +306,7 @@ div:hover {
         display: grid;
         grid-template-columns: 1fr 1fr;
         row-gap: 17px; } }
-    .portfolio__filter div {
+    .portfolio__filter button {
       font-size: 2rem;
       color: #e49290;
       font-weight: 500;
@@ -306,14 +318,15 @@ div:hover {
       transition: all 0.4s ease-in;
       display: flex;
       align-items: center;
+      background: transparent;
       cursor: pointer; }
-      .portfolio__filter div:not(:last-child) {
+      .portfolio__filter button:not(:last-child) {
         margin-right: 29px; }
       @media only screen and (max-width: 500px) {
-        .portfolio__filter div {
+        .portfolio__filter button {
           font-size: 1.4rem;
           margin-right: 29px; } }
-      .portfolio__filter div:hover {
+      .portfolio__filter button:hover {
         background: #e49290;
         color: #fff; }
   .portfolio__sites {
@@ -333,7 +346,7 @@ div:hover {
       border: 5px solid #f3e8fd;
       border-radius: 10px;
       box-shadow: 0 0px 5px rgba(0, 0, 0, 0.9); }
-  .portfolio__site:hover .portfolio__overlay {
+  .portfolio__site .portfolio__overlay {
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     width: 101%;
@@ -365,7 +378,7 @@ div:hover {
     display: none; }
   .portfolio .active {
     background: #e49290;
-    color: #fff; }
+    color: #42315a; }
   .portfolio__overlay {
     position: absolute;
     top: 3px;
@@ -378,7 +391,7 @@ div:hover {
     place-content: center;
     column-gap: 20px;
     width: 0;
-    opacity: 0;
+    opacity: 1;
     transition: all 0.5s ease-in-out; }
     .portfolio__overlay img {
       width: 26px;
@@ -440,7 +453,7 @@ div:hover {
   .skills__skill {
     border-bottom: 2px solid #e49290;
     padding-bottom: 18px; }
-    .skills__skill h2 {
+    .skills__skill h3 {
       font-size: 3rem;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -449,7 +462,7 @@ div:hover {
       color: #736d7c;
       margin-right: 53px; }
       @media only screen and (max-width: 935px) {
-        .skills__skill h2 {
+        .skills__skill h3 {
           margin-right: 0; } }
   .skills__img {
     padding: 1rem;

@@ -29,15 +29,26 @@ html{
     }
 }
 
-
-
 body{
+	width: 100%;
+}
+
+
+main{
 
     display: grid;
     grid-template-columns: [full-start] minmax(2rem, 1fr)  [center-start] repeat(8,[col-start] minmax(min-content, 15rem) [col-start]) [center-end] minmax(2rem, 1fr) [full-end];
     grid-template-rows:  585px repeat(5,min-content);
     
 }
+
+.hidden
+{position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;}
 
 ::selection{
     background-color:$color-primary;
