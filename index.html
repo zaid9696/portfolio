@@ -400,14 +400,14 @@
         <h2 class="contact__title">get in touch</h2>
 
 
-        <form  class="contact__form">
+        <form  class="contact__form"  method="POST" data-netlify="true">
 
 
             <div class="contact__inputs">
                 <label for="name" class="hidden">Name</label>
-                <input id="name" type="text" placeholder="Name">
+                <input id="name" type="text" name="name" placeholder="Name">
                 <label for="email" class="hidden">Email</label>
-                <input id="email" type="email" placeholder="Email">
+                <input id="email" type="email" name="email"placeholder="Email">
             </div>
             <label for="message" class="hidden">Message</label>
             <textarea id="message" placeholder="Message"></textarea>
