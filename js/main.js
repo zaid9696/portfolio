@@ -1,14 +1,15 @@
+const bodyClass = document.querySelector('body').classList;
 
  const lang = navigator.language;
 // Detecting Arabic Language To Redirect;
- if(lang == 'ar'){
+ if(lang == 'ar' && bodyClass[0] != 'ar'){
 
      // window.location.replace("http://www.w3schools.com");
 
      const url = window.location.href;
      
      window.location.href = `${url}/ar/index.html`;
-     console.log(url);
+    //  console.log(bodyClass);
  
  }
 
@@ -24,6 +25,7 @@ const filter = document.querySelector(".portfolio__filter"),
     listNav = document.querySelectorAll(".nav__menu ul li"),
     listNavAnchor = document.querySelectorAll(".nav__menu ul li a"),
     loader = document.querySelector(".loader_container");
+
 function showPress() {
     sites.forEach((e) => {
         e.classList.remove("show"), e.classList.add("hide"), "wordpress" === e.dataset.site && (e.classList.remove("hide"), e.classList.remove("last"), e.classList.add("show"));
@@ -63,15 +65,15 @@ const transhide = () => {};
 
 btn.addEventListener("click", (e) => {
 
-    const bodyClass = document.querySelector('body').classList;
+    // const bodyClass = document.querySelector('body').classList;
 
     console.log()
 
     if(bodyClass[0] != 'ar'){
-
+        
         sites.forEach((t, s) => {
 
-         if ("show less" === btn.innerHTML) btn.innerHTML = "show More";
+         if ("show less" === btn.innerHTML) btn.innerHTML = "show More" ;
             else {
                 if (6 == s) {
                     const s = t.children[1].children[0].children[0];
@@ -85,10 +87,15 @@ btn.addEventListener("click", (e) => {
             s >= 6 && t.classList.toggle("last");
         });
 
-    }else{
+    } 
 
+    if(bodyClass[0] == 'ar'){
+        
         sites.forEach((t, s) => {
-            if ("عرض أقل" === btn.innerHTML) btn.innerHTML = "عرض المزيد";
+
+            const work = t.classList.contains('last');
+
+         if (!work) btn.innerHTML = "عرض المزيد" ;
             else {
                 if (6 == s) {
                     const s = t.children[1].children[0].children[0];
@@ -97,11 +104,17 @@ btn.addEventListener("click", (e) => {
                             s.focus();
                         }, 200);
                 }
+                console.log(work)
                 btn.innerHTML = "عرض أقل";
             }
             s >= 6 && t.classList.toggle("last");
+            console.log(t.classList[1])
         });
-    }
+
+    } 
+   
+
+   
 
     
 });
