@@ -88,3 +88,18 @@
         max-width: 111px;
     }
 }
+
+
+.ar .skills__title{
+
+    letter-spacing: 0;
+}
+
+.ar .skills__skill h3{
+
+    margin-left: 44px;
+    @media only screen and (max-width:$bp-medium){
+        margin-left: 0;
+    }
+    margin-right: 0;
+}

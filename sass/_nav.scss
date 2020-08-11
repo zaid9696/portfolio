@@ -112,6 +112,7 @@
     #nav-logo{
 
         text-decoration: none;
+        font-family:'Roboto', sans-serif;
         h3{
             font-size: 3rem;
             color: #fff;
@@ -208,4 +209,36 @@
     height:auto;
     background: #6d5682;
     box-shadow: 0 1px 5px rgba(0,0,0,0.6);
+}
+
+.ar nav ul li{
+
+    margin-left: 3rem;
+    margin-right: 0;
+
+    a{
+        font-size:1.9rem;
+    }
+}
+
+.ar .nav .cancel{
+
+
+    left: 16px;
+    right: auto;
+    @media only screen and (max-width:350px){
+        left: 65px;
+    }
+
+}
+
+.ar .nav__logo {
+
+
+    margin-right: 21px;
+}
+
+.ar .nav{
+
+    right: 0;
 }

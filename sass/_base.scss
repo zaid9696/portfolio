@@ -32,6 +32,10 @@ html{
 body{
 	width: 100%;
 }
+body.ar{
+	
+	font-family: 'El Messiri', sans-serif;
+}
 
 
 main{
@@ -49,6 +53,13 @@ top:auto;
 width:1px;
 height:1px;
 overflow:hidden;}
+
+.ar .hidden{
+
+	left: 10000px;
+}
+
+
 
 ::selection{
     background-color:$color-primary;

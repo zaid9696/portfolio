@@ -238,3 +238,49 @@
 
 
 }
+
+
+.ar .portfolio__filter button:not(:last-child){
+
+    margin-left: 29px;
+    margin-right: 0px;
+
+    @media only screen and (max-width:$bp-small){
+
+        margin-right: 29px;
+        margin-left: 0px;
+     }
+
+
+}
+
+.ar .portfolio__site .portfolio__overlay{
+
+    width:100%;
+}
+
+.ar .portfolio__overlay{
+    
+    left: -5px;
+}
+
+.ar .portfolio__overlay img{
+    
+    margin-right: 10px;
+}
+
+.ar .portfolio__info a{
+    
+    width: 132px;
+    @media only screen and (max-width:$bp-small){
+        width: 110px;
+     }
+}
+.ar .portfolio__info h4,
+.ar .portfolio__btn,
+.ar .contact__title
+{
+    
+    letter-spacing: 0;
+}
+
