@@ -67,13 +67,13 @@ btn.addEventListener("click", (e) => {
 
     // const bodyClass = document.querySelector('body').classList;
 
-    console.log()
+    
 
     if(bodyClass[0] != 'ar'){
         
         sites.forEach((t, s) => {
-
-         if ("show less" === btn.innerHTML) btn.innerHTML = "show More" ;
+            const work = t.classList.contains('last');
+         if (!work) btn.innerHTML = "show More" ;
             else {
                 if (6 == s) {
                     const s = t.children[1].children[0].children[0];
