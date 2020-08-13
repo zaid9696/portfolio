@@ -8,7 +8,7 @@ const bodyClass = document.querySelector('body').classList;
 
      const url = window.location.href;
      
-     window.location.href = `${url}/ar/index.html`;
+     window.location.href = `${url}ar/index.html`;
     //  console.log(bodyClass);
  
  }
