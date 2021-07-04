@@ -5,13 +5,12 @@ import Hero from '../components/Hero';
 import Skills from '../components/Skills';
 import Portfolio from '../components/Portfolio';
 import Contact from '../components/Contact';
-import {server} from '../config/index';
+import {main} from '../data/data';
 
-export default function Home({results}) {
+export default function Home() {
 
-    const {main} = results;
-    // console.log(main);
-  return (
+   
+    return (
       
       <>
         <Hero />
@@ -22,19 +21,5 @@ export default function Home({results}) {
 
    ) 
 
-
-}
-
-
-export async function getServerSideProps() {
-
-
-      const res = await fetch(`${server}/api/allData`);
-      const results = await res.json();
-
-      return {
-
-        props: {results}
-      }
 
 }
