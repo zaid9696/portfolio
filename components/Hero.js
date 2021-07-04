@@ -89,7 +89,7 @@ const Hero = (props) => {
             <motion.h1 
             initial={{opacity: 0}} 
           animate={{opacity: 1, transition:{delay: 0.5}}}>
-          Hi, I'm <span>Zaid.</span> <br /> I Develop, and Design Websites.</motion.h1>
+          Hi, I&apos;m <span>Zaid.</span> <br /> I Develop, and Design Websites.</motion.h1>
                   <motion.button 
                   initial={{opacity: 0}} 
                   animate={{opacity: 1, transition:{delay: 1}}}
