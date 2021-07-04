@@ -26,7 +26,7 @@ export default function Home({results}) {
 }
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
 
       const res = await fetch(`${server}/api/allData`);
