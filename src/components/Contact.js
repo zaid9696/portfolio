@@ -11,8 +11,8 @@ const Contact = (props) => {
     		<div className="grid-center">
     			<h2 className="title">get in touch</h2>
     			<div>
-    				<form  className="form"  method="POST" data-netlify="true">
-
+    				<form  className="form" name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
             <div className="inputs">
                 <label htmlFor="name" className="hidden">Name</label>
                 <input id="name" type="text" name="name" placeholder="Name" />
@@ -35,3 +35,4 @@ const Contact = (props) => {
 
 
 export default Contact;
+
