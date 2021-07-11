@@ -1,2 +1,3 @@
+# My Portfolio
 
-I built my portfolio with Gatsby 
+My new Portfolio I built it with Gatsby and, Styled-components, Framer-motion, Netlify form
