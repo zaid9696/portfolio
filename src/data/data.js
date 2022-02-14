@@ -2,6 +2,7 @@ import js1 from '../images/portfolio/js-1.png';
 import react1 from '../images/portfolio/react-1.png';
 import react2 from '../images/portfolio/react-2.png';
 import next1 from '../images/portfolio/next-1.png';
+import next2 from '../images/portfolio/next-2.png';
 import wp1 from '../images/portfolio/wp-1.png';
 import wp2 from '../images/portfolio/wp-2.png';
 import wp3 from '../images/portfolio/wp-3.png';
@@ -22,6 +23,14 @@ export const main = [
 	
 	{
 		id: 2,
+		name: 'Freelanceland',
+		link: 'https://freelanceland.netlify.app/',
+		gitLink: 'https://github.com/zaid9696/freelanceland-frontend',
+		thumbnail: next2,
+		type: 'next'
+	},
+	{
+		id: 3,
 		name: 'Zimmer App',
 		link: 'https://zimmer-app.netlify.app/',
 		gitLink: 'https://github.com/zaid9696/zimmer-app',
@@ -29,7 +38,7 @@ export const main = [
 		type: 'react'
 	},
 	{
-		id: 3,
+		id: 4,
 		name: 'Movinfov2',
 		link: 'https://movinfov2.netlify.app/',
 		gitLink: 'https://github.com/zaid9696/movinfo',
@@ -37,7 +46,7 @@ export const main = [
 		type: 'js'
 	},
 	{
-		id: 4,
+		id: 5,
 		name: 'Slick Slices',
 		link: 'https://slick-slices-next.netlify.app/',
 		gitLink: 'https://github.com/zaid9696/slick-slices-next-app',
@@ -46,7 +55,7 @@ export const main = [
 	},
 
 	{
-		id: 5,
+		id: 6,
 		name: 'Butterfly Shop',
 		link: 'http://butterfly-eshop.atwebpages.com/',
 		gitLink: 'https://github.com/zaid9696/Butterfly',
@@ -54,7 +63,7 @@ export const main = [
 		type: 'wc'
 	},
 	{
-		id: 6,
+		id: 7,
 		name: 'Country Info',
 		link: 'https://country-info-z.netlify.app/',
 		gitLink: 'https://github.com/zaid9696/country-info',
@@ -62,7 +71,7 @@ export const main = [
 		type: 'react'
 	},
 	{
-		id: 7,
+		id: 8,
 		name: "Ballon d'Or",
 		link: 'http://ballon-d-or.atwebpages.com/',
 		gitLink: 'https://github.com/zaid9696/ballon-d-or',
@@ -70,7 +79,7 @@ export const main = [
 		type: 'wp'
 	},
 	{
-		id: 8,
+		id: 9,
 		name: "Ealam Alanutha",
 		link: 'https://alam-aloneta.com/',
 		gitLink: 'https://github.com/zaid9696/alam-alanotha',
@@ -78,7 +87,7 @@ export const main = [
 		type: 'wp'
 	},
 	{
-		id: 9,
+		id: 10,
 		name: "Alradadi Blog",
 		link: 'http://ahmedalrdadi.atwebpages.com/',
 		gitLink: 'https://github.com/zaid9696/ahmedalradadi',

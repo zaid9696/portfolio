@@ -136,6 +136,24 @@ const SkillsItems = (props) => {
     	</div>
     </FadeInWhenVisible>
 
+        <FadeInWhenVisible>
+        <div className="skill">
+            <h3>Backend</h3>
+            <div className="icons">
+                <div className="icon">
+                    <StaticImage placeholder="none"  title="NodeJs" src="../images/skills/be/nodejs.svg"  alt="NodeJs Icon" />
+                </div>
+                <div className="icon">
+                    <StaticImage placeholder="none" title="Express" src="../images/skills/be/expressjs.svg"  alt="Express Icon" />
+                </div>
+                <div className="icon">
+                    <StaticImage placeholder="none" title="MongoDB" src="../images/skills/be/mongodb.svg"  alt="MongoDB" />
+                </div>
+            
+            </div>
+        </div>
+    </FadeInWhenVisible>
+
     <FadeInWhenVisible>
     	<div className="skill">
     		<h3>CSS</h3>
