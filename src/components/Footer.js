@@ -66,7 +66,7 @@ const Footer = (props) => {
     						</a>
     			
     					
-    						<a href="https://twitter.com/zaiddev96" target="_blank" rel="noreferrer"><div className="img"><StaticImage src="../images/footer/twitter.svg" alt="Twitter Icon"/></div>
+    						<a href="https://twitter.com/ZaidDevPro9" target="_blank" rel="noreferrer"><div className="img"><StaticImage src="../images/footer/twitter.svg" alt="Twitter Icon"/></div>
     						</a>
     				</div>
     			</div>
